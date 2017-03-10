@@ -1,0 +1,355 @@
+body {
+  background-color: #000000;
+  font-family: 'Orbitron', sans-serif;
+  margin:0;
+  color: #FFFFFF;
+}
+
+/* RPM DIVS */
+.barTachInner { /* RPM BARS */
+  float: left;
+  width: 6px;
+  height: 30px;
+  background: #557750;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px #7f7f7f;
+}
+.barTachInnerMarker { /* RPM NUMBERS */
+  float: left;
+  min-height: 5px;
+  min-width: 5px;
+  max-width: 5px;
+  color: #FFFFFF;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 8pt;
+}
+.barTachInner:nth-child(n+23) { /* RPM LARGER BARS YELLOW */
+      height: 60px;
+      background: #777750;
+      box-shadow: 0px 0px 8px #777750;
+}
+.barTachInner:nth-child(n+27) { /* RPM LARGER BARS RED*/
+      height: 60px;
+      background: #775050;
+      box-shadow: 0px 0px 8px #775050;
+}
+
+/* RPM ID DIVS */
+#barTach {
+  float: left;
+  position: absolute;
+  height: 80px;
+  left: 0px;
+}
+#rpmDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top:45px;
+  margin-left: 5px;
+  font-size: 24pt;
+  text-align: right;
+  width: 135px;
+}
+#rpmLabelDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 150px;
+  font-size: 12pt;
+}
+#barTachMarker {
+  position: absolute;
+  width: 100%;
+}
+
+.barTachInnerlg { /* RPM BARS */
+  float: left;
+  width: 6px;
+  height: 30px;
+  background: #557750;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px #7f7f7f;
+}
+.barTachInnerMarkerlg { /* RPM NUMBERS */
+  float: left;
+  min-height: 5px;
+  min-width: 5px;
+  max-width: 5px;
+  color: #FFFFFF;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 8pt;
+}
+.barTachInnerlg:nth-child(n+23) { /* RPM LARGER BARS YELLOW */
+      height: 60px;
+      background: #777750;
+      box-shadow: 0px 0px 8px #777750;
+}
+.barTachInnerlg:nth-child(n+27) { /* RPM LARGER BARS RED*/
+      height: 60px;
+      background: #775050;
+      box-shadow: 0px 0px 8px #775050;
+}
+#barTachlg {
+  float: left;
+  position: absolute;
+  height: 80px;
+  left: 0px;
+  margin-top: 80px;
+}
+#rpmDivlg {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top:45px;
+  margin-left: 5px;
+  font-size: 24pt;
+  text-align: right;
+  width: 135px;
+}
+#rpmLabelDivlg {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 150px;
+  font-size: 12pt;
+}
+#barTachMarkerlg {
+  position: absolute;
+  width: 100%;
+}
+
+/* SPEED DIVS */
+.barSpeedInner {  /* SPEED BARS */
+  float: left;
+  width: 6px;
+  height: 30px;
+  background: #557750;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px #7f7f7f;
+
+}
+.barSpeedInnerMarker {  /* SPEED NUMBERS */
+  float: left;
+  min-height: 5px;
+  min-width: 5px;
+  max-width: 5px;
+  color: #FFFFFF;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 8pt;
+
+}
+.barSpeedInner:nth-child(n+18) { /* SPEED LARGER BARS YELLOW */
+      background: #777750;
+      box-shadow: 0px 0px 8px #777750;
+}
+.barSpeedInner:nth-child(n+23) { /* SPEED LARGER BARS RED*/
+      height: 60px;
+      background: #775050;
+      box-shadow: 0px 0px 8px #775050;
+}
+
+/* SPEED ID DIVS */
+#barSpeed {
+  position: absolute;
+  margin-top: 80px;
+  float: left;
+  left: 0px;
+}
+#speedDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 5px;
+  font-size: 24pt;
+  text-align: right;
+  width: 135px;
+}
+#speedLabelDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 150px;
+  font-size: 12pt;
+}
+#barSpeedMarker {
+  position: absolute;
+}
+
+/* TEMP DIVS */
+.barTempInner {  /* TEMP BARS */
+  float: left;
+  width: 6px;
+  height: 15px;
+  background: #557750;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px #7f7f7f;
+
+}
+.barTempInnerMarker {  /* TEMP NUMBERS */
+  float: left;
+  min-height: 5px;
+  min-width: 5px;
+  max-width: 5px;
+  color: #FFFFFF;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 8pt;
+
+}
+.barTempInner:nth-child(n+18) { /* TEMP LARGER BARS YELLOW */
+      background: #777750;
+      box-shadow: 0px 0px 8px #777750;
+}
+.barTempInner:nth-child(n+23) { /* TEMP LARGER BARS RED*/
+      height: 30px;
+      background: #775050;
+      box-shadow: 0px 0px 8px #775050;
+}
+
+/* SPEED ID DIVS */
+#barTemp{
+  position: absolute;
+  margin-top: 160px;
+  float: left;
+  left: 0px;
+}
+#tempDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 5px;
+  font-size: 16pt;
+  text-align: right;
+  width: 135px;
+}
+#tempLabelDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 150px;
+  font-size: 8pt;
+}
+#barTempMarker {
+  position: absolute;
+}
+
+/* MAP AND CLOCK */
+#clock {
+  position: absolute;
+  color: #ffffff;
+  margin-top: 210px;
+  font-size: 10pt;
+}
+#map-canvas {
+  position: absolute;
+  width: 320px;
+  height: 240px;
+}
+#tempMapDiv {
+  font-size: 0.5em;
+  float: left;
+  padding-left: 1em;
+}
+#speedMapDiv {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 20pt;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#speedMapUnitDiv {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 8pt;
+  margin-top: 10px;
+  margin-left: 80px;
+}
+
+#rpmMapDiv {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 14pt;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+#rpmMapUnitDiv {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 8pt;
+  margin-top: 35px;
+  margin-left: 90px;
+}
+
+#tempMapDiv {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 14pt;
+  margin-top: 55px;
+  margin-left: -9px;
+}
+#tempMapUnitDiv {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 8pt;
+  margin-top: 55px;
+  margin-left: 60px;
+}
+
+#logoDiv {
+  position: absolute;
+  margin-left: 205px;
+  margin-top: 205px;
+}
+#panel1 {
+    margin:5px;
+}
+
+#lgSpeed {
+  position: absolute;
+  font-size: 60pt;
+  margin-left: 60px;
+  margin-right: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+#lgSpeedUnit {
+  position: absolute;
+  font-size: 14pt;
+  margin-left: 265px;
+  margin-right: 10px;
+  margin-top: 50px;
+}
+
+#address {
+  position: absolute;
+  margin-top: 160px;
+  margin-left: 5px;
+  text-align: center;
+}
+#splashText {
+  position: absolute;
+  color: #FFFFFF;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-size: 20pt;
+}
+#spinner {
+  position: absolute;
+  color: #FFFFFF;
+  margin-top: 120px;
+  margin-left: 160px;
+}
+#logoDivSplash {
+  margin-top: 20px;
+  margin-left: 110px;
+}

@@ -1,0 +1,201 @@
+body {
+  background-color: #000000;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* RPM DIV */
+.barTachInner {
+  float: left;
+  width: 1.4em;
+  height: 10em;
+  background: grey;
+  margin-left: 0.5em;
+  margin-top: 2em;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 8px #7f7f7f;
+     -moz-box-shadow: 0px 0px 8px #7f7f7f;
+          box-shadow: 0px 0px 8px #7f7f7f;
+}
+
+.barTachInnerMarker {
+  float: left;
+  min-height: 1em;
+  min-width: 1.5em;
+  max-width: 1em;
+  color: #FFFFFF;
+  margin-left: 6.1em;
+  text-align: center;
+}
+.barTachInner:nth-child(n+24) {
+    height: 15em;
+    background: grey;
+}
+
+/* SPEED DIV */
+.barSpeedInner {
+  float: left;
+  width: 1.4em;
+  height: 10em;
+  background: grey;
+  margin-left: 0.5em;
+  margin-top: 1.5em;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 8px #7f7f7f;
+     -moz-box-shadow: 0px 0px 8px #7f7f7f;
+          box-shadow: 0px 0px 8px #7f7f7f;
+
+}
+
+.barSpeedInnerMarker {
+  float: left;
+  min-height: 1.5em;
+  min-width: 1.5em;
+  max-width: 1.5em;
+  color: #FFFFFF;
+  margin-left: 2.3em;
+  text-align: center;
+}
+.barSpeedInner:nth-child(n+24) {
+    height: 15em;
+    background: grey;
+}
+
+
+.barTempInnerMarkerLabel {
+  font-size: 19pt;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.barTempInnerMarker {
+  width: 2em;
+  height: 2em;
+  max-width: 2em;
+  max-height: 2em;
+  margin-left: 0.5em;
+  margin-top: 1em;
+  overflow:hidden;
+}
+.barTempInner {
+  background: grey;
+  width: 2em;
+  height: 2em;
+  margin-left: 1em;
+  margin-top: 1em;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 8px #7f7f7f;
+     -moz-box-shadow: 0px 0px 8px #7f7f7f;
+          box-shadow: 0px 0px 8px #7f7f7f;
+}
+
+
+
+
+
+/* SPEED ID DIVS */
+#barSpeed {
+  position: absolute;
+  margin-top: 20em;
+  float: left;
+  width: 90%;
+  margin-left: 10%
+}
+#speedDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 3.5em;
+  margin-left: 0.5em;
+    font-size: 4em;
+}
+#speedLabelDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 3.5em;
+  margin-left: 3.2em;
+  font-size: 4em;
+}
+#barSpeedMarker {
+  position: absolute;
+  margin-top: 0em;
+}
+#barTachMarker {
+  position: absolute;
+  margin-top: 0em;
+  width: 100%;
+}
+
+/* RPM ID DIVS */
+#barTach {
+  float: left;
+  position: absolute;
+  height: 7em;
+  width: 90%;
+  margin-left: 10%
+}
+#rpmDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 3.5em;
+  margin-left: 0.5em;
+  font-size: 4em;
+}
+#rpmLabelDiv {
+  color: #FFFFFF;
+  position: absolute;
+  margin-top: 3.5em;
+  margin-left: 4.5em;
+  font-size: 4em ;
+}
+#barTemp {
+  width: 10%;
+  position: absolute;
+  float: left;
+  color: #FFFFFF;
+}
+#barTempContainer {
+  float: left;
+  position: absolute;
+  margin-left: 2em;
+}
+#tempDiv {
+  position: absolute;
+  margin-top: 21.5em;
+  font-size: 2em;
+}
+#tempLabelDiv {
+  position: absolute;
+  margin-left: 3em;
+  margin-top: 21.5em;
+  font-size: 2em;
+}
+
+#clock {
+  position: absolute;
+  margin-left: 23.5em;
+  margin-top: 21.5em;
+  font-size: 2em;
+  width: 10em;
+}
+
+#map-canvas {
+  width: 60.19em;
+  height: 35em;
+}
+
+#mapInfoContainer {
+  margin-top: 0.5em;
+  color: #ffffff;
+  font-size: 4em;
+}
+
+.mapInfoDiv {
+  float: left;
+  padding-left: 0.5em;
+}
+
+#tempMapDiv {
+  font-size: 0.5em;
+  float: left;
+  padding-left: 1em;
+}

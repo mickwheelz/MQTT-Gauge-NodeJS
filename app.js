@@ -1,10 +1,16 @@
 var http = require('http');
 var express = require('express');
 var mqtt = require('mqtt')
+var SerialPort = require("serialport");
 
 var app = express();
 
-var client  = mqtt.connect('mqtt://test.mosquitto.org')
+var port = new SerialPort('/dev/cu.wchusbserial1420', {
+  baudRate: 115200,
+  parser: SerialPort.parsers.readline('\r\n')
+});
+
+var client  = mqtt.connect('mqtt://test.mosquitto.org');
 
 app.get('env');
 app.set('view engine', 'ejs');
@@ -18,6 +24,10 @@ client.on('message', function (topic, message) {
   mqttBuffer = message.toString().split("|");
   console.log(mqttBuffer);
 })
+
+port.on('data', function (data) {
+  client.publish('presence', data)
+});
 
 var currentSpeed = function() {
   if (typeof mqttBuffer == 'undefined') {

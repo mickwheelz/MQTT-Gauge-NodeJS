@@ -282,7 +282,7 @@ function refreshGauges() {
       $( ".barSpeedInner:nth-child(n+" + 23 + ")" ).css('box-shadow', '0px 0px 8px #775050');
     }
 
-    if(rpmSingle >= 18 && rpmSingle < 23) { //YELLOW ZONE 70-100MPH
+    if(speedSingle >= 18 && speedSingle < 23) { //YELLOW ZONE 70-100MPH
       $( ".barSpeedInner:nth-child(-n+" + speedSingle + ")" ).css('background', '#ffff00');
       $( ".barSpeedInner:nth-child(-n+" + speedSingle + ")" ).css('box-shadow', '0px 0px 8px #ffff00');
 
@@ -293,7 +293,7 @@ function refreshGauges() {
       $( ".barSpeedInner:nth-child(n+" + 27 + ")" ).css('box-shadow', '0px 0px 8px #775050');
     }
 
-    if(rpmSingle >= 23) { //RED ZONE 100-140MPH
+    if(speedSingle >= 23) { //RED ZONE 100-140MPH
       $( ".barSpeedInner:nth-child(-n+" + speedSingle + ")" ).css('background', '#ff0000');
       $( ".barSpeedInner:nth-child(-n+" + speedSingle + ")" ).css('box-shadow', '0px 0px 8px #ff0000');
 
@@ -301,7 +301,58 @@ function refreshGauges() {
       $( ".barSpeedInner:nth-child(n+" + speedSingle + ")" ).css('box-shadow', '0px 0px 8px #775050');
     }
 
-    console.log("rpmBar:" + rpmSingle + " speedBar: " + speedSingle );//+ "tempBar: " + newTemp + "/" + tempSingle );
+    //TEMP
+    var tempSingle = parseInt(temp/5) + 4; //other elemnents, fix this later
+    var leadingZeroTemp;
+    if(temp < 10) {
+      leadingZeroTemp = "00" + temp;
+    }
+    if(temp < 100) {
+      leadingZeroTemp = "0" + temp;
+    }
+    else {
+      leadingZeroTemp = temp;
+    }
+    $("#tempDiv").html(leadingZeroTemp);
+    $("#lgTemp").html(leadingZeroTemp);
+    $("#tempMapDiv").html(temp);
+
+    if(tempSingle < 23) { // GREEN ZONE 0-80c
+      $( ".barTempInner:nth-child(-n+" + tempSingle + ")" ).css('background', '#31f40e');
+      $( ".barTempInner:nth-child(-n+" + tempSingle + ")" ).css('box-shadow', '0px 0px 8px #25c109');
+
+      $( ".barTempInner:nth-child(n+" + tempSingle + ")" ).css('background', '#557750');
+      $( ".barTempInner:nth-child(n+" + tempSingle + ")" ).css('box-shadow', '0px 0px 8px #7f7f7f');
+
+      $( ".barTempInner:nth-child(n+" + 18 + ")" ).css('background', '#777750');
+      $( ".barTempInner:nth-child(n+" + 18 + ")" ).css('box-shadow', '0px 0px 8px #777750');
+
+      $( ".barTempInner:nth-child(n+" + 23 + ")" ).css('background', '#775050');
+      $( ".barTempInner:nth-child(n+" + 23 + ")" ).css('box-shadow', '0px 0px 8px #775050');
+    }
+
+    if(tempSingle >= 20 && tempSingle < 23) { //YELLOW ZONE 80-100c
+      $( ".barTempInner:nth-child(-n+" + tempSingle + ")" ).css('background', '#ffff00');
+      $( ".barTempInner:nth-child(-n+" + tempSingle + ")" ).css('box-shadow', '0px 0px 8px #ffff00');
+
+      $( ".barTempInner:nth-child(n+" + tempSingle + ")" ).css('background', '#777750');
+      $( ".barTempInner:nth-child(n+" + tempSingle + ")" ).css('box-shadow', '0px 0px 8px #777750');
+
+      $( ".barTempInner:nth-child(n+" + 27 + ")" ).css('background', '#775050');
+      $( ".barTempInner:nth-child(n+" + 27 + ")" ).css('box-shadow', '0px 0px 8px #775050');
+    }
+
+    if(tempSingle >= 23) { //RED ZONE 100-140c
+      $( ".barTempInner:nth-child(-n+" + tempSingle + ")" ).css('background', '#ff0000');
+      $( ".barTempInner:nth-child(-n+" + tempSingle + ")" ).css('box-shadow', '0px 0px 8px #ff0000');
+
+      $( ".barTempInner:nth-child(n+" + tempSingle + ")" ).css('background', '#775050');
+      $( ".barTempInner:nth-child(n+" + tempSingle + ")" ).css('box-shadow', '0px 0px 8px #775050');
+    }
+
+
+
+
 
   }
 
@@ -339,7 +390,7 @@ function init() {
 
     }
   }
-  
+
 function latLngToAddress (lat,lng) {
 
   $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?latlng='+ lat + ',' + lng, function(data) {

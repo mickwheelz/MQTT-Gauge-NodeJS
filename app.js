@@ -4,10 +4,10 @@ var mqtt = require('mqtt')
 
 var app = express();
 
-var client  = mqtt.connect('mqtt://127.0.0.1')
+var client  = mqtt.connect('mqtt://test.mosquitto.org')
 
 app.get('env');
-app.set('view engine', 'ejs');  //tell Express we're using EJS
+app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/views'));
 
 var mqttBuffer;
@@ -19,7 +19,6 @@ client.on('message', function (topic, message) {
   console.log(mqttBuffer);
 })
 
-//get some server data for sending it to the client
 var currentSpeed = function() {
   if (typeof mqttBuffer == 'undefined') {
       return '0';
@@ -71,8 +70,7 @@ var currentMode = function() {
 
 
 app.get('/', function(req, res) {
-    //render index.ejs file
-    res.render('index')//, {val: getData()});
+    res.render('index');
 });
 
 app.get('/data/speed', function(req, res) {

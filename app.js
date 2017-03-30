@@ -36,7 +36,6 @@ var powerStatus;
 var app = express();
 app.get('env');
 app.set('view engine', 'ejs');
-console.log(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/views'));
 
 function getArgs() {
@@ -76,13 +75,18 @@ function initServices() {
 
 function parseSerialData(data) {
     console.log('Recieved: ' + data);
-    powerStatus = JSON.parse(data).bikeData.Power;
-    serialDataBuffer = data;
+    try {
+      powerStatus = JSON.parse(data).bikeData.Power;
+      serialDataBuffer = data;
+    }
+    catch (e) {
+      console.log(e);
+    }
   }
 
 function powerManagement() {
   if(!powerStatus) {
-    //childProcess.exec('shutdown now', console.log);
+    childProcess.exec('shutdown now', console.log);
     console.log("Shutting Down RPI");
   }
 }

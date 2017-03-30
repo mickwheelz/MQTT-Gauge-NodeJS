@@ -36,6 +36,7 @@ var powerStatus;
 var app = express();
 app.get('env');
 app.set('view engine', 'ejs');
+console.log(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/views'));
 
 function getArgs() {

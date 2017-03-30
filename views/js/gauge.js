@@ -12,9 +12,9 @@ var mode;
 var status;
 var time;
 
-//gets ever 500ms. will change to event based
+//gets ever 100ms. will change to event based
 $(document).ready(function() {
-  setInterval('refreshGauges()', 500);
+  setInterval('refreshGauges()', 100);
 });
 
 function init() {

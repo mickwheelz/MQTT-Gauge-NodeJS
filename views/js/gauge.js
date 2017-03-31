@@ -205,7 +205,7 @@ function latLngToAddress (lat,lng) {
 // speed, 5, "speed", 18,23,27,0
 function gaugeBarUpdate(value,factor,gauge,zone1,zone2,zone3,leadingZeros) {
 
-  value = parseInt(value);
+  //value = parseInt(value);
 
   var valSingle = parseInt(value/factor) + 4; //other elemnents, fix this later
   var valLeadingZero;

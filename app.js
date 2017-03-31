@@ -86,7 +86,7 @@ function parseSerialData(data) {
 
 function powerManagement() {
   if(!powerStatus) {
-    childProcess.exec('shutdown now', console.log);
+    //childProcess.exec('shutdown now', console.log);
     console.log("Shutting Down RPI");
   }
 }
